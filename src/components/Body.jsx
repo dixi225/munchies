@@ -69,7 +69,7 @@ const Body=()=>
         </div>
         <div className='restraunt-card mt-20 justify-around flex flex-col md:flex-row flex-wrap '> 
         {
-        SearchList.map((restraunt)=><Link className=' hover:drop-shadow-xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl' key={restraunt.info.id} to={"restraunt/"+restraunt.info.id}><Restrauntcard  resData={restraunt}/></Link>)
+        SearchList.map((restraunt)=><Link className=' hover:drop-shadow-2xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl' key={restraunt.info.id} to={"restraunt/"+restraunt.info.id}><Restrauntcard  resData={restraunt}/></Link>)
         }
         </div>
     </div>)

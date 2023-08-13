@@ -33530,14 +33530,14 @@ const Body = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restraunt-card mt-20 justify-around flex flex-col md:flex-row flex-wrap ",
                 children: SearchList.map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        className: " hover:drop-shadow-xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl",
+                        className: " hover:drop-shadow-2xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl",
                         to: "restraunt/" + restraunt.info.id,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
                             lineNumber: 72,
-                            columnNumber: 176
+                            columnNumber: 177
                         }, undefined)
                     }, restraunt.info.id, false, {
                         fileName: "src/components/Body.jsx",
@@ -33607,7 +33607,7 @@ const Restrauntcard = (props)=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "mb-4",
+                        className: "mb-4 font-bold text-1xl",
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/RestrauntCard.jsx",
@@ -33687,62 +33687,83 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
+        className: "container flex flex-row  flex-wrap  justify-around mx-auto ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10  bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 4,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 5,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 6,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 7,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 8,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 9,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 10,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 11,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 13,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.jsx",
+                lineNumber: 14,
                 columnNumber: 9
             }, undefined)
         ]

@@ -9,7 +9,7 @@ const Restrauntcard=(props)=>
         <img className='restraunt-card-img w-1/2 mb-4' src={CDN_URL+cloudinaryImageId}/>           
         </div>
         <div>
-        <h3 className='mb-4'>{name}</h3>
+        <h3 className='mb-4 font-bold text-1xl'>{name}</h3>
         <h5 className='mb-4'>{cuisines.join(' , ')}</h5>
         <h5 className='mb-4'>{avgRating} stars</h5>
         <h5 className='mb-4'>{costForTwo}</h5>
