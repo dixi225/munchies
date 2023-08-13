@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  padding: .8rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  padding: 1rem;
+}
+
+.Header {
+  border: 1px solid #000;
+  justify-content: space-between;
+  margin: .2rem;
+  display: flex;
+}
+
+.img {
+  max-width: 200px;
+  height: auto;
+}
+
+.nav-items {
+  padding: 2rem;
+}
+
+.search {
+  padding: 1rem;
+}
+
+.restraunt-card-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: .6rem 1rem;
+  display: flex;
+}
+
+.restraunt-card {
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15rem;
+  height: auto;
+  margin: 2rem;
+  padding: 10px;
+  display: flex;
+}
+
+.restraunt-card:hover {
+  border: 1px solid #000;
+}
+
+.restraunt-card-img {
+  width: 8rem;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 1.2rem;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: .6rem 1rem;
+  display: flex;
+}
+
+.shimmer-card {
+  text-align: center;
+  background-color: #f0f0f0;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15rem;
+  height: 20rem;
+  margin: 2rem;
+  padding: 10px;
+  display: flex;
+}
+
+.btn1 {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3rem;
+  display: flex;
+}
+
+.search-cont {
+  align-items: center;
+  display: flex;
+}
+
+.btn2 {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */
