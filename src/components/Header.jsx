@@ -7,25 +7,23 @@ const Header=()=>
 {
     const [btnState,setbtnState]=useState("Log-In");
     const status=useOnlineStatus()
-   return <div className='Header'>
+   return <div className='Header container mx-auto pt-5 mb-10 flex items-center flex-row justify-between'>
         <div className='img-container'>
-            <img className='img' src= {LOGO_URL}/>
-        </div>
-        <div className='nav-items'>
-        
-        <ul>
-            <li>
+            <img className='img w-1/4' src= {LOGO_URL}/>
+        </div>        
+        <div className="flex flex-row items-center space-x-4">
+            <div>
                 Online Status :{status? "✅" : "🔴"}
-            </li>
-            <li>
+            </div>
+            <div className=" bg-gray-100 p-2 hover:drop-shadow-md">
             <Link to="/">Home</Link>
-            </li>
-            <li>
+            </div>
+            <div className=" bg-gray-100 p-2 hover:drop-shadow-md">
                 <Link to="/about">About us</Link>
-            </li>
-            <li>Contact us</li>
-            <li>Cart</li>
-            <button className="btn1" onClick={
+            </div>
+            <div className="cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Contact us</div>
+            <div className="cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Cart</div>
+            <button className="btn1 bg-gray-100 p-2 hover:drop-shadow-md" onClick={
             ()=>
             {
                btnState==="Log-In"?setbtnState("Log-out"): setbtnState("Log-In");
@@ -33,9 +31,7 @@ const Header=()=>
         }>
             {btnState}
         </button>
-        </ul>
         </div>
-
     </div>
 }
 export default Header;

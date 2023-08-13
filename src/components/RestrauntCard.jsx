@@ -4,16 +4,16 @@ const Restrauntcard=(props)=>
     const { resData } = props
     const {name,cuisines,avgRating,costForTwo,cloudinaryImageId}=resData?.info
     const{deliveryTime}=resData?.info?.sla
-    return <div className='restraunt-card'>
-        <div className='restraunt-card-img-cont'>
-        <img className='restraunt-card-img' src={CDN_URL+cloudinaryImageId}/>           
+    return <div className='restraunt-card flex flex-col text-center p-5 '>
+        <div className='restraunt-card-img-cont flex justify-center'>
+        <img className='restraunt-card-img w-1/2 mb-4' src={CDN_URL+cloudinaryImageId}/>           
         </div>
         <div>
-        <h3>{name}</h3>
-        <h5>{cuisines.join(' , ')}</h5>
-        <h5>{avgRating} stars</h5>
-        <h5>{costForTwo}</h5>
-        <h5>{deliveryTime} mins</h5>
+        <h3 className='mb-4'>{name}</h3>
+        <h5 className='mb-4'>{cuisines.join(' , ')}</h5>
+        <h5 className='mb-4'>{avgRating} stars</h5>
+        <h5 className='mb-4'>{costForTwo}</h5>
+        <h5 className='mb-4'>{deliveryTime} mins</h5>
         </div>
     </div>
 }

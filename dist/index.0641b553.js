@@ -27265,12 +27265,12 @@ const Header = ()=>{
     const [btnState, setbtnState] = (0, _react.useState)("Log-In");
     const status = (0, _useOnlineStatusDefault.default)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Header",
+        className: "Header container mx-auto pt-5 mb-10 flex items-center flex-row justify-between",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "img-container",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "img",
+                    className: "img w-1/4",
                     src: (0, _constants.LOGO_URL)
                 }, void 0, false, {
                     fileName: "src/components/Header.jsx",
@@ -27283,79 +27283,77 @@ const Header = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: [
-                                "Online Status :",
-                                status ? "✅" : "\uD83D\uDD34"
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 17,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: "Home"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.jsx",
-                                lineNumber: 21,
-                                columnNumber: 13
-                            }, undefined)
+                className: "flex flex-row items-center space-x-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            "Online Status :",
+                            status ? "✅" : "\uD83D\uDD34"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 15,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: " bg-gray-100 p-2 hover:drop-shadow-md",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/",
+                            children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.jsx",
-                            lineNumber: 20,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About us"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.jsx",
-                                lineNumber: 24,
-                                columnNumber: 17
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 23,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact us"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 26,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Cart"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 27,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "btn1",
-                            onClick: ()=>{
-                                btnState === "Log-In" ? setbtnState("Log-out") : setbtnState("Log-In");
-                            },
-                            children: btnState
-                        }, void 0, false, {
-                            fileName: "src/components/Header.jsx",
-                            lineNumber: 28,
+                            lineNumber: 19,
                             columnNumber: 13
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Header.jsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 18,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: " bg-gray-100 p-2 hover:drop-shadow-md",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/about",
+                            children: "About us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.jsx",
+                            lineNumber: 22,
+                            columnNumber: 17
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 21,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
+                        children: "Contact us"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
+                        children: "Cart"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 25,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "btn1 bg-gray-100 p-2 hover:drop-shadow-md",
+                        onClick: ()=>{
+                            btnState === "Log-In" ? setbtnState("Log-out") : setbtnState("Log-In");
+                        },
+                        children: btnState
+                    }, void 0, false, {
+                        fileName: "src/components/Header.jsx",
+                        lineNumber: 26,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Header.jsx",
                 lineNumber: 14,
                 columnNumber: 9
@@ -27389,7 +27387,7 @@ parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
 parcelHelpers.export(exports, "MENU_URL", ()=>MENU_URL);
 const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const LOGO_URL = "https://logodix.com/logo/94501.jpg";
+const LOGO_URL = "https://i.pinimg.com/originals/c5/d9/fc/c5d9fc1e18bcf039f464c2ab6cfb3eb6.jpg";
 const MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.8941773&lng=80.96365019999999&restaurantId=";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -33474,11 +33472,11 @@ const Body = ()=>{
         lineNumber: 29,
         columnNumber: 42
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
+        className: "body container mx-auto",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "btn",
+                    className: "btn ml-10 p-3 bg-gray-100 hover:drop-shadow-md rounded-xl",
                     onClick: ()=>{
                         const filterList = ListOfRestraunts.filter((res)=>res.info.avgRating > 4);
                         setListOfRestraunts(filterList);
@@ -33486,31 +33484,31 @@ const Body = ()=>{
                     children: "Top rated resturants"
                 }, void 0, false, {
                     fileName: "src/components/Body.jsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 13
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-cont",
+                className: "ml-10 m-3 flex items-center search-cont",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
-                        className: "search-box btn",
+                        className: "search-box btn rounded-md border border-solid border-black",
                         value: SearchText,
                         onChange: (e)=>{
                             setSearchText(e.target.value);
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn2",
+                        className: "hover:drop-shadow-md btn2 ml-2 p-2 rounded-md bg-gray-100",
                         onClick: ()=>{
                             // {console.log(SearchText,typeof SearchText);}
                             const filterList = ListOfRestraunts.filter((res)=>res?.info?.name.toLowerCase().includes(SearchText.toLowerCase()));
@@ -33520,41 +33518,42 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restraunt-card-container",
+                className: "restraunt-card mt-20 justify-around flex flex-col md:flex-row flex-wrap ",
                 children: SearchList.map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        className: " hover:drop-shadow-xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl",
                         to: "restraunt/" + restraunt.info.id,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 71,
-                            columnNumber: 103
+                            lineNumber: 72,
+                            columnNumber: 176
                         }, undefined)
                     }, restraunt.info.id, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 71,
+                        lineNumber: 72,
                         columnNumber: 37
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 69,
+                lineNumber: 70,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 29,
-        columnNumber: 55
+        lineNumber: 30,
+        columnNumber: 5
     }, undefined);
 };
 _s(Body, "9DaZyFk0hTjpu5DoEnBnpI8hzEI=", false, function() {
@@ -33588,12 +33587,12 @@ const Restrauntcard = (props)=>{
     const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } = resData?.info;
     const { deliveryTime } = resData?.info?.sla;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restraunt-card",
+        className: "restraunt-card flex flex-col text-center p-5 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restraunt-card-img-cont",
+                className: "restraunt-card-img-cont flex justify-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "restraunt-card-img",
+                    className: "restraunt-card-img w-1/2 mb-4",
                     src: (0, _constants.CDN_URL) + cloudinaryImageId
                 }, void 0, false, {
                     fileName: "src/components/RestrauntCard.jsx",
@@ -33608,6 +33607,7 @@ const Restrauntcard = (props)=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "mb-4",
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/RestrauntCard.jsx",
@@ -33615,6 +33615,7 @@ const Restrauntcard = (props)=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        className: "mb-4",
                         children: cuisines.join(" , ")
                     }, void 0, false, {
                         fileName: "src/components/RestrauntCard.jsx",
@@ -33622,6 +33623,7 @@ const Restrauntcard = (props)=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        className: "mb-4",
                         children: [
                             avgRating,
                             " stars"
@@ -33632,6 +33634,7 @@ const Restrauntcard = (props)=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        className: "mb-4",
                         children: costForTwo
                     }, void 0, false, {
                         fileName: "src/components/RestrauntCard.jsx",
@@ -33639,6 +33642,7 @@ const Restrauntcard = (props)=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        className: "mb-4",
                         children: [
                             deliveryTime,
                             " mins"
