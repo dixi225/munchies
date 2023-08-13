@@ -27283,9 +27283,10 @@ const Header = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-row items-center space-x-4",
+                className: " items-center space-x-4  flex flex-row",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "",
                         children: [
                             "Online Status :",
                             status ? "✅" : "\uD83D\uDD34"
@@ -27296,7 +27297,7 @@ const Header = ()=>{
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: " bg-gray-100 p-2 hover:drop-shadow-md",
+                        className: "hidden md:block bg-gray-100 p-2 hover:drop-shadow-md",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
                             children: "Home"
@@ -27311,7 +27312,7 @@ const Header = ()=>{
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: " bg-gray-100 p-2 hover:drop-shadow-md",
+                        className: "hidden md:block bg-gray-100 p-2 hover:drop-shadow-md",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/about",
                             children: "About us"
@@ -27326,7 +27327,7 @@ const Header = ()=>{
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
+                        className: "hidden md:block cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
                         children: "Contact us"
                     }, void 0, false, {
                         fileName: "src/components/Header.jsx",
@@ -27334,7 +27335,7 @@ const Header = ()=>{
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
+                        className: "hidden md:block cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md",
                         children: "Cart"
                     }, void 0, false, {
                         fileName: "src/components/Header.jsx",
@@ -27342,7 +27343,7 @@ const Header = ()=>{
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "btn1 bg-gray-100 p-2 hover:drop-shadow-md",
+                        className: "hidden md:block btn1 bg-gray-100 p-2 hover:drop-shadow-md",
                         onClick: ()=>{
                             btnState === "Log-In" ? setbtnState("Log-out") : setbtnState("Log-In");
                         },
@@ -33454,9 +33455,9 @@ const Body = ()=>{
     async function fetchData() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8941773&lng=80.96365019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        console.log(json);
         setListOfRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
         setSearchList(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+        console.log(ListOfRestraunts);
     }
     //Conditional Rendering
     const status = (0, _useOnlineStatusDefault.default)();
@@ -33475,6 +33476,7 @@ const Body = ()=>{
         className: "body container mx-auto",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "btn ml-10 p-3 bg-gray-100 hover:drop-shadow-md rounded-xl",
                     onClick: ()=>{
@@ -33493,7 +33495,7 @@ const Body = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "ml-10 m-3 flex items-center search-cont",
+                className: "ml-10 m-3 flex justify-center items-center search-cont",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
@@ -33528,16 +33530,16 @@ const Body = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restraunt-card mt-20 justify-around flex flex-col md:flex-row flex-wrap ",
+                className: "restraunt-card mt-20 justify-around mx-14 flex flex-col mb-10 md:mx-0 md:flex-row flex-wrap ",
                 children: SearchList.map((restraunt)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        className: " hover:drop-shadow-2xl bg-gray-100 m-2 w-1/4 mb-20 rounded-xl",
+                        className: " hover:drop-shadow-2xl bg-gray-100 m-2 md:w-1/4 mb-20 rounded-xl",
                         to: "restraunt/" + restraunt.info.id,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
                             resData: restraunt
                         }, void 0, false, {
                             fileName: "src/components/Body.jsx",
                             lineNumber: 72,
-                            columnNumber: 177
+                            columnNumber: 180
                         }, undefined)
                     }, restraunt.info.id, false, {
                         fileName: "src/components/Body.jsx",
@@ -33690,77 +33692,77 @@ const Shimmer = ()=>{
         className: "container flex flex-row  flex-wrap  justify-around mx-auto ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10  bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80 mb-10  bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 4,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 5,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 6,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 7,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 8,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 9,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 10,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 11,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80 mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 12,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 13,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card w-44 h-72 mb-10 bg-gray-300 rounded-2xl"
+                className: "shimmer-card w-52 h-80  mb-10 bg-gray-300 rounded-2xl"
             }, void 0, false, {
                 fileName: "src/components/Shimmer.jsx",
                 lineNumber: 14,

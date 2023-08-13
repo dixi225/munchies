@@ -11,19 +11,19 @@ const Header=()=>
         <div className='img-container'>
             <img className='img w-1/4' src= {LOGO_URL}/>
         </div>        
-        <div className="flex flex-row items-center space-x-4">
-            <div>
+        <div className=" items-center space-x-4  flex flex-row">
+            <div className="">
                 Online Status :{status? "✅" : "🔴"}
             </div>
-            <div className=" bg-gray-100 p-2 hover:drop-shadow-md">
+            <div className="hidden md:block bg-gray-100 p-2 hover:drop-shadow-md">
             <Link to="/">Home</Link>
             </div>
-            <div className=" bg-gray-100 p-2 hover:drop-shadow-md">
+            <div className="hidden md:block bg-gray-100 p-2 hover:drop-shadow-md">
                 <Link to="/about">About us</Link>
             </div>
-            <div className="cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Contact us</div>
-            <div className="cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Cart</div>
-            <button className="btn1 bg-gray-100 p-2 hover:drop-shadow-md" onClick={
+            <div className="hidden md:block cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Contact us</div>
+            <div className="hidden md:block cursor-pointer bg-gray-100 p-2 hover:drop-shadow-md">Cart</div>
+            <button className="hidden md:block btn1 bg-gray-100 p-2 hover:drop-shadow-md" onClick={
             ()=>
             {
                btnState==="Log-In"?setbtnState("Log-out"): setbtnState("Log-In");
