@@ -2,8 +2,8 @@ import Restrauntcard from './RestrauntCard'
 // import resObj from '../utils/mockData';
 import {useEffect, useState } from 'react';
 import Shimmer from './Shimmer';
-import { Link } from 'react-router-dom'
 import useOnlineStatus from '../utils/useOnlineStatus';
+import DisplayBody from './DisplayBody';
 const Body=()=>
 {
     const [ListOfRestraunts,setListOfRestraunts]=useState([]);
@@ -29,7 +29,7 @@ const Body=()=>
     return ListOfRestraunts.length===0 ? <Shimmer/>: (
     <div className='body container mx-auto'>
         <div className='flex justify-center'>
-            <button className='btn ml-10 p-3 bg-gray-100 hover:drop-shadow-md rounded-xl' onClick={()=>
+            <button className='btn ml-10 p-3 hover:bg-gray-300 bg-gray-100 hover:drop-shadow-md rounded-xl' onClick={()=>
             {
                 const filterList=ListOfRestraunts.filter(
                     (res)=> res.info.avgRating > 4
@@ -43,7 +43,7 @@ const Body=()=>
         <div className='ml-10 m-3 flex justify-center items-center search-cont'>
         <input 
             type='text'
-            className='search-box btn rounded-md border border-solid border-black'
+            className='search-box btn rounded-md border border-solid border-slate w-1/2 hover:bg-slate-300 bg-slate-100'
             value={SearchText}
             onChange={
                 (e)=>{
@@ -53,7 +53,7 @@ const Body=()=>
             >
             </input>
         <button 
-        className='hover:drop-shadow-md btn2 ml-2 p-2 rounded-md bg-gray-100'
+        className='hover:drop-shadow-md hover:bg-gray-300 btn2 ml-2 p-2 rounded-md bg-gray-100'
         onClick={
             ()=>
             {
@@ -67,11 +67,7 @@ const Body=()=>
         }
         >Search</button>
         </div>
-        <div className='restraunt-card mt-20 justify-around mx-14 flex flex-col mb-10 md:mx-0 md:flex-row flex-wrap '> 
-        {
-        SearchList.map((restraunt)=><Link className=' hover:drop-shadow-2xl bg-gray-100 m-2 md:w-1/4 mb-20 rounded-xl' key={restraunt.info.id} to={"restraunt/"+restraunt.info.id}><Restrauntcard  resData={restraunt}/></Link>)
-        }
-        </div>
+        <DisplayBody SearchList={SearchList}/>
     </div>)
 }
 export default Body;    
