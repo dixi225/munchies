@@ -14,7 +14,7 @@ const ItemList=({itemsarr})=>
                         <div className="pb-2 px-1 font-medium text-xs">{items?.card?.info?.description}</div>
                     </div>
                  <div>
-                    <img className="w-{64}" src={ITEM_URL+items?.card?.info?.imageId} alt="" srcset="" />    
+                    <img className=" w-48 h-auto p-3" src={ITEM_URL+items?.card?.info?.imageId} alt="" srcset="" />    
                 </div>   
                 </div>)
                 

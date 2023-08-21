@@ -34258,7 +34258,7 @@ const ItemList = ({ itemsarr })=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "w-{64}",
+                            className: " w-48 h-auto p-3",
                             src: (0, _constants.ITEM_URL) + items?.card?.info?.imageId,
                             alt: "",
                             srcset: ""

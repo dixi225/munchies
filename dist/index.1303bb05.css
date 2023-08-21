@@ -316,12 +316,12 @@ img, video {
   margin-right: 0;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mr-1 {
   margin-right: .25rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .flex {
@@ -336,12 +336,20 @@ img, video {
   height: 20rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-1\/2 {
   width: 50%;
 }
 
 .w-1\/4 {
   width: 25%;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-52 {
@@ -353,8 +361,8 @@ img, video {
   width: fit-content;
 }
 
-.w-96 {
-  width: 24rem;
+.w-48 {
+  width: 12rem;
 }
 
 .cursor-pointer {
