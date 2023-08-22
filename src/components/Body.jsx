@@ -1,5 +1,3 @@
-import Restrauntcard from './RestrauntCard'
-// import resObj from '../utils/mockData';
 import {useEffect, useState } from 'react';
 import Shimmer from './Shimmer';
 import useOnlineStatus from '../utils/useOnlineStatus';
@@ -8,7 +6,6 @@ const Body=()=>
 {
     const [ListOfRestraunts,setListOfRestraunts]=useState([]);
     const [SearchText,setSearchText]=useState("");
-
     const [SearchList,setSearchList]=useState([]);   //DOUBT    
     useEffect(()=>
     {
@@ -19,11 +16,9 @@ const Body=()=>
     {
         const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8941773&lng=80.96365019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json= await data.json();
-        setListOfRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-        setSearchList(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-        console.log(ListOfRestraunts);
+        setListOfRestraunts(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setSearchList(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }   
-    //Conditional Rendering
     const status=useOnlineStatus()
     if(!status) return <h1>No Internet Connection, Plz try connecting to Internet.</h1>
     return ListOfRestraunts.length===0 ? <Shimmer/>: (
@@ -62,7 +57,6 @@ const Body=()=>
                    (res)=>  res?.info?.name.toLowerCase().includes(SearchText.toLowerCase())
                 )
                 setSearchList(filterList);
-                {console.log(filterList.length);}
             }
         }
         >Search</button>

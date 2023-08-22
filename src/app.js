@@ -1,21 +1,26 @@
-import React,{lazy,Suspense} from 'react'
+import React,{lazy,Suspense, useState} from 'react'
 import reactDom from 'react-dom'
 import Header from './components/Header'
 import Body from './components/Body'
-// import About from './components/About'
 import Error from './components/Error'
-import User from './components/User'
 import RestrauntMenu from './components/ReastrauntMenu'
 import { createRoutesFromElements,RouterProvider,createBrowserRouter,Routes,Outlet,Route, Router } from 'react-router-dom';
 import Shimmer from './components/Shimmer'
+import UserContext from './utils/userContext'
+import appStore from './utils/appStore'
+import { Provider } from 'react-redux'
 const About=lazy(()=>import("./components/About"))
 const Applayout=()=>
 {
-
- return  <div className='app-layout'>
-   <Header/>
-   <Outlet/>
+  const[userName,setUserName]=useState("Harsh Dixit")
+return  <Provider store={appStore}>
+ <div className='app-layout'>
+  <UserContext.Provider value={{loggedInUser:userName}}>
+    <Header/>
+    <Outlet/>
+  </UserContext.Provider>
 </div>
+</Provider>
 }
 // const appRouter=createBrowserRouter([
 //   {

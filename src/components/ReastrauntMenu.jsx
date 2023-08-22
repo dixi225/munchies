@@ -1,11 +1,12 @@
 import Shimmer from "./Shimmer";
-import RestrauntProfile from "./RestrauntProfile";
 import { useParams } from "react-router-dom";
-import { MENU_URL } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu1";
 import RestrauntCategory from "./RestrauntCategory";
+import { useState } from 'react'
 const RestrauntMenu=()=>
 {
+  const [showIndex,setShowIndex]=useState(0)
+  // const[showItem,setShowItem]=useState(false)
     const {resId}=useParams();
     // const[temp,settemp]=useState([]);
     const ResMenu=useRestaurantMenu(resId)
@@ -23,7 +24,8 @@ const RestrauntMenu=()=>
     <h3 className="text-center   font-bold mb-5 md:text-left md:ml-20 text-2xl">Menu</h3>
     {
     categories.map(
-    (categories)=> (<RestrauntCategory data={categories?.card?.card}/>)
+      (categories,index)=>(<RestrauntCategory key={index} changeIndex={()=>{setShowIndex(index)}}
+      showItem={index==showIndex?true:false} data={categories?.card?.card} />)
     )
     }
     {/* <ul className="col flex flex-col items-center md:items-start">
