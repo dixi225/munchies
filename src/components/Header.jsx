@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 // import About from "./About";
 const Header=()=>
 {
-    const cartItems=useSelector((store)=>store.cart.items)
+    const cartItems=useSelector((store)=>store.cart.items)//subscribing to the redux stote slice
     const [btnState,setbtnState]=useState("Log-In");
     const status=useOnlineStatus()
     const data=useContext(UserContext)
@@ -15,8 +15,8 @@ const Header=()=>
         <div className='img-container'>
             <img className='img w-1/4  mr-0' src= {LOGO_URL}/>
         </div>        
-        <div className=" items-center space-x-6  flex flex-row">
-            <div className="">
+        <div className=" items-center flex space-x-6 ">
+            <div>
                 Online Status :{status? "✅" : "🔴"}
             </div>
             <div className=" hover:bg-gray-300 hidden md:block bg-gray-100 p-4 hover:drop-shadow-md">
@@ -26,7 +26,7 @@ const Header=()=>
                 <Link to="/about">About us</Link>
             </div>
             <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md">Contact us</div>
-            <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md">Cart-{cartItems.length}</div>
+            <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md"><Link to='/cart'>Cart-{cartItems.length}</Link></div>
             <button className=" hover:bg-gray-300 hidden md:block btn1 bg-gray-100 p-4 hover:drop-shadow-md" onClick={
             ()=>
             {

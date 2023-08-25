@@ -1,6 +1,13 @@
+import { useDispatch } from "react-redux"
+import { addItem } from "../utils/cartSlice"
 import { ITEM_URL } from "../utils/constants"
 const ItemList=({itemsarr})=>
 {
+    const dispatch=useDispatch();
+    const handleCLick=(items)=>  
+        {
+            dispatch(addItem(items))
+        }
     return <>
         {
         itemsarr.map(
@@ -13,7 +20,7 @@ const ItemList=({itemsarr})=>
                         </div>
                         <div className="pb-2 px-1 font-medium text-xs">{items?.card?.info?.description}</div>
                     </div>
-                 <div>
+                 <div onClick={()=>{handleCLick(items)}}>
                     <img className=" w-48 h-auto p-3" src={ITEM_URL+items?.card?.info?.imageId} alt="" srcset="" />    
                 </div>   
                 </div>)
