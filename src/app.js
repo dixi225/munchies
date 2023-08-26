@@ -11,6 +11,7 @@ import appStore from './utils/appStore'
 import { Provider } from 'react-redux'
 const About=lazy(()=>import("./components/About"))
 const Cart=lazy(()=>import("./components/Cart"))
+const Contact=lazy(()=>import("./components/Contact"))
 const Applayout=()=>
 {
   const[userName,setUserName]=useState("Harsh Dixit")
@@ -52,6 +53,7 @@ const appRouter=createBrowserRouter(
       <Route path='about' element={<Suspense fallback={<Shimmer/>}><About/></Suspense>}/>
       <Route path='cart' element={<Suspense fallback={<Shimmer/>}><Cart/></Suspense>}/>
       <Route  path='restraunt/:resId' element={<RestrauntMenu/>} />
+      <Route path='contact' element={<Contact/>}></Route>
       <Route path="*" errorElement={<Error/>}/>
     </Route>
   )

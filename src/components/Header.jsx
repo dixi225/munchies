@@ -25,7 +25,9 @@ const Header=()=>
             <div className=" hover:bg-gray-300 hidden md:block bg-gray-100 p-4 hover:drop-shadow-md">
                 <Link to="/about">About us</Link>
             </div>
-            <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md">Contact us</div>
+            <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md">
+                <Link to='/contact'>Contact</Link>
+            </div>
             <div className=" hover:bg-gray-300 hidden md:block cursor-pointer bg-gray-100 p-4 hover:drop-shadow-md"><Link to='/cart'>Cart-{cartItems.length}</Link></div>
             <button className=" hover:bg-gray-300 hidden md:block btn1 bg-gray-100 p-4 hover:drop-shadow-md" onClick={
             ()=>
