@@ -1,5 +1,6 @@
 import { useState,useContext } from "react";
-import { LOGO_URL } from "../utils/constants";
+// import { LOGO_URL } from "../utils/constants";
+import logo from '../../pngaaa.com-684127.png'
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/userContext";
@@ -13,7 +14,7 @@ const Header=()=>
     const data=useContext(UserContext)
    return <div className='Header pt-5 mb-10 flex items-center flex-row justify-around'>
         <div className='img-container'>
-            <img className='img w-1/4  mr-0' src= {LOGO_URL}/>
+            <img className='img w-1/4  mr-0' src= {logo}/>
         </div>        
         <div className=" items-center flex space-x-6 ">
             <div>
