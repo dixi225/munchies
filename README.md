@@ -21,7 +21,7 @@ React Based Web Application with a minimalist but clean UI that enables user to 
 Install Munchies with npm
 
 ```bash
-  npm install //to install dependencies
-  npm run build // to run the application
+  npm install 
+  npm run build 
 ```
     
